@@ -1,0 +1,709 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Infotech | Digital Marketing & Website Development Agency</title>
+    <meta name="description" content="Noble Infotech helps startups, local businesses, and enterprises scale through Digital Marketing, SEO, Social Media Marketing, Performance Ads, Branding, and High-Converting Websites.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon (CDN for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Favicon Page Icon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+</head>
+<body>
+
+    <!-- Loading Animation Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="{% static 'images/logo.png' %}" alt="Noble Infotech Logo" class="loader-logo-img" width="60" height="60" style="border-radius: 50%; object-fit: cover; animation: rotateLoader 2s linear infinite;">
+                <div class="loader-text-wrap">
+                    <span class="loader-title">NOBLE</span>
+                    <span class="loader-subtitle">INFOTECH</span>
+                </div>
+            </div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mouse Glow Cursor Follower -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon-wrap" style="display: flex; align-items: center;">
+                    <img src="{% static 'images/logo.png' %}" alt="Noble Infotech Logo" class="logo-img" width="40" height="40" style="border-radius: 50%; object-fit: cover;">
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">NOBLE</span>
+                    <span class="brand-sub">INFOTECH</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#journey" class="nav-link">Our Journey</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-cta" style="display: flex; align-items: center;">
+                <button class="theme-toggle-btn magnetic" id="themeToggle" aria-label="Toggle Theme" data-strength="15">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary magnetic" data-strength="25">
+                    <span>Get Free Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="ri-menu-3-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-menu-overlay">
+        <button class="mobile-close"><i class="ri-close-line"></i></button>
+        <div class="mobile-nav-links">
+            <button class="theme-toggle-btn" id="mobileThemeToggle" style="margin-right: 0; margin-bottom: 1.5rem;">
+                <i class="ri-moon-line"></i>
+            </button>
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#journey" class="mobile-nav-link">Our Journey</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#results" class="mobile-nav-link">Results</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-blobs">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+            <div class="particles-container" id="particles"></div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge fade-up-anim">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Award Winning Digital Agency</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="text-reveal-wrap"><span class="text-reveal-line">We Scale Businesses</span></span>
+                        <span class="text-reveal-wrap"><span class="text-reveal-line">Through Digital</span></span>
+                        <span class="text-reveal-wrap"><span class="text-reveal-line">Marketing & Websites</span></span>
+                    </h1>
+                    
+                    <p class="hero-subtitle fade-up-anim">
+                        We help startups, local businesses, and enterprises generate more leads, sales, and brand authority through SEO, Social Media Marketing, Performance Ads, Branding, and Custom Website Development.
+                    </p>
+                    
+                    <div class="hero-actions fade-up-anim">
+                        <a href="#contact" class="btn btn-gradient btn-large magnetic" data-strength="15">
+                            <span>Get Free Consultation</span>
+                        </a>
+                        <a href="#journey" class="btn btn-outline btn-large magnetic" data-strength="15">
+                            <span>View Our Work</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual fade-up-anim">
+                    <div class="visual-wrapper">
+                        <!-- Glass 3D Dashboard Mockup -->
+                        <div class="dashboard-mockup">
+                            <div class="mockup-header">
+                                <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                <div class="search-bar">nobleinfotech.co/analytics</div>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-sidebar">
+                                    <div class="sidebar-item active"><i class="ri-dashboard-line"></i></div>
+                                    <div class="sidebar-item"><i class="ri-bar-chart-line"></i></div>
+                                    <div class="sidebar-item"><i class="ri-user-line"></i></div>
+                                    <div class="sidebar-item"><i class="ri-settings-4-line"></i></div>
+                                </div>
+                                <div class="mockup-main">
+                                    <div class="main-stats">
+                                        <div class="stat-box">
+                                            <div class="stat-label">Total Traffic</div>
+                                            <div class="stat-val">124.5K</div>
+                                            <div class="stat-change positive">+24.5%</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-label">Conversions</div>
+                                            <div class="stat-val">9.8%</div>
+                                            <div class="stat-change positive">+12.8%</div>
+                                        </div>
+                                    </div>
+                                    <div class="main-chart">
+                                        <!-- Custom animated SVG Chart -->
+                                        <svg viewBox="0 0 300 120" class="chart-svg">
+                                            <defs>
+                                                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+                                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                                                </linearGradient>
+                                                <linearGradient id="chartGrad2" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="0%" stop-color="#a855f7" stop-opacity="0.4"/>
+                                                    <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M 0 100 Q 40 40 80 80 T 160 30 T 240 70 T 300 10" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" class="chart-line-1" />
+                                            <path d="M 0 100 Q 40 40 80 80 T 160 30 T 240 70 T 300 10 L 300 120 L 0 120 Z" fill="url(#chartGrad)" class="chart-area-1" />
+                                            
+                                            <path d="M 0 90 Q 50 70 100 50 T 200 80 T 300 40" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,4" class="chart-line-2" />
+                                            <path d="M 0 90 Q 50 70 100 50 T 200 80 T 300 40 L 300 120 L 0 120 Z" fill="url(#chartGrad2)" class="chart-area-2" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Devices / Assets -->
+                        <div class="floating-item laptop-mockup">
+                            <i class="ri-computer-line"></i>
+                            <span>Web Dev</span>
+                        </div>
+                        <div class="floating-item phone-mockup">
+                            <i class="ri-smartphone-line"></i>
+                            <span>Mobile UX</span>
+                        </div>
+                        <div class="floating-item seo-chart-float">
+                            <i class="ri-seo-line"></i>
+                            <span>SEO Rank #1</span>
+                        </div>
+                        <div class="floating-item ai-icon-float">
+                            <i class="ri-magic-line"></i>
+                            <span>AI Automation</span>
+                        </div>
+                        
+                        <!-- Floating Social Media Icons -->
+                        <div class="floating-social sm-fb"><i class="ri-facebook-fill"></i></div>
+                        <div class="floating-social sm-ig"><i class="ri-instagram-line"></i></div>
+                        <div class="floating-social sm-google"><i class="ri-google-fill"></i></div>
+                        <div class="floating-social sm-yt"><i class="ri-youtube-fill"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Growth Journey Section (Cargo Ship Animation) -->
+        <section id="journey" class="journey-section">
+            <div class="container journey-title-container">
+                <div class="badge" style="margin-right: 0.5rem;">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Business Growth Journey</span>
+                </div>
+                <div class="badge" id="timeBadgeWrap" style="border-color: var(--color-primary);">
+                    <span class="badge-dot" style="background-color: var(--color-primary); box-shadow: 0 0 10px var(--color-primary);"></span>
+                    <span class="badge-text" id="timeBadge">Daytime Voyage</span>
+                </div>
+                <h2 class="section-title">From Port of Discovery to Peak Success</h2>
+                <p class="section-subtitle">Scroll down to see the ship represent your business scaling across our tactical growth ports.</p>
+            </div>
+            
+            <!-- Sticky track container -->
+            <div class="journey-track-wrapper">
+                <div class="journey-sticky-content">
+                    
+                    <!-- Sky with clouds -->
+                    <div class="journey-sky">
+                        <div class="journey-celestial"></div>
+                        <div class="cloud cloud-1"><i class="ri-cloud-line"></i></div>
+                        <div class="cloud cloud-2"><i class="ri-cloud-fill"></i></div>
+                        <div class="cloud cloud-3"><i class="ri-cloud-line"></i></div>
+                        <div class="birds-container">
+                            <svg class="birds-svg" viewBox="0 0 100 50">
+                                <path class="bird bird-1" d="M10 20 Q15 10 20 20 Q25 10 30 20" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+                                <path class="bird bird-2" d="M40 30 Q45 25 50 30 Q55 25 60 30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Ports Track (Anchor nodes) -->
+                    <div class="ports-track">
+                        <div class="ports-line">
+                            <div class="ports-line-progress"></div>
+                        </div>
+                        
+                        <!-- Port 1: Discovery -->
+                        <div class="port-node" style="left: 5%;" data-port="1">
+                            <div class="port-marker"><i class="ri-search-eye-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 1</h3>
+                                <h4>Discovery</h4>
+                                <p>Deep competitor auditing and audience profiling.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 2: Strategy -->
+                        <div class="port-node" style="left: 20%;" data-port="2">
+                            <div class="port-marker"><i class="ri-compass-3-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 2</h3>
+                                <h4>Strategy</h4>
+                                <p>High-ROI roadmap design and technical scoping.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 3: Digital Marketing -->
+                        <div class="port-node" style="left: 36%;" data-port="3">
+                            <div class="port-marker"><i class="ri-advertisement-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 3</h3>
+                                <h4>Digital Marketing</h4>
+                                <p>Paid campaigns, SEO setup, and brand awareness.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 4: Website Development -->
+                        <div class="port-node" style="left: 52%;" data-port="4">
+                            <div class="port-marker"><i class="ri-code-box-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 4</h3>
+                                <h4>Website Development</h4>
+                                <p>Custom high-speed coding and UI/UX deployment.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 5: Lead Generation -->
+                        <div class="port-node" style="left: 68%;" data-port="5">
+                            <div class="port-marker"><i class="ri-user-shared-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 5</h3>
+                                <h4>Lead Generation</h4>
+                                <p>Funnels, automation, and lead capture systems.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 6: Business Growth -->
+                        <div class="port-node" style="left: 84%;" data-port="6">
+                            <div class="port-marker"><i class="ri-funds-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 6</h3>
+                                <h4>Business Growth</h4>
+                                <p>Scaling conversions, expansion, and high volume sales.</p>
+                            </div>
+                        </div>
+
+                        <!-- Port 7: Success -->
+                        <div class="port-node" style="left: 95%;" data-port="7">
+                            <div class="port-marker"><i class="ri-trophy-line"></i></div>
+                            <div class="port-info">
+                                <h3>Port 7</h3>
+                                <h4>Success</h4>
+                                <p>Continuous ROI expansion, analytics, and market leadership.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Water & Wave Area -->
+                    <div class="journey-sea">
+                        <svg class="sea-waves" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                            <path class="wave-back" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,48C840,43,960,53,1080,53.3C1200,53,1320,43,1380,37.3L1440,32L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z" opacity="0.5"></path>
+                            <path class="wave-middle" d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,80C1120,85,1280,75,1360,69.3L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.8"></path>
+                            <path class="wave-front" d="M0,80L120,74.7C240,69,480,59,720,64C960,69,1200,85,1320,96L1440,107L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path>
+                        </svg>
+                        
+                        <!-- Sleek Luxury Cargo Ship -->
+                        <div class="luxury-ship" id="cargoShip">
+                            <!-- Water Wake / Trails -->
+                            <div class="water-trails">
+                                <div class="trail trail-1"></div>
+                                <div class="trail trail-2"></div>
+                            </div>
+                            
+                            <!-- Minimal luxury ship SVG -->
+                            <svg class="ship-svg" viewBox="0 0 160 50" width="130" height="40">
+                                <!-- Hull -->
+                                <path d="M 10 35 L 20 45 L 140 45 L 150 35 L 145 25 L 15 25 Z" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+                                <rect x="25" y="20" width="15" height="6" fill="#0f172a" />
+                                <!-- Containers (Representing growth blocks) -->
+                                <rect x="45" y="15" width="20" height="11" fill="#3b82f6" rx="1" />
+                                <rect x="68" y="10" width="22" height="16" fill="#8b5cf6" rx="1" />
+                                <rect x="93" y="15" width="20" height="11" fill="#a855f7" rx="1" />
+                                <!-- Superstructure / Bridge -->
+                                <path d="M 118 25 L 118 10 L 135 10 L 138 25 Z" fill="#e2e8f0" />
+                                <rect class="ship-window" x="123" y="13" width="3" height="3" />
+                                <rect class="ship-window" x="128" y="13" width="3" height="3" />
+                                <!-- Radar / Mast -->
+                                <line x1="130" y1="10" x2="130" y2="3" stroke="#e2e8f0" stroke-width="1.5" />
+                                <line x1="126" y1="5" x2="134" y2="5" stroke="#e2e8f0" stroke-width="1.5" />
+                                <!-- Cargo crane -->
+                                <path d="M 40 25 L 40 10 L 55 5" stroke="#475569" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="services-header text-center">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">What We Excel At</span>
+                    </div>
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <p class="section-subtitle">We deploy bespoke digital systems, performance ads, search domination, and sleek web development to maximize customer conversion.</p>
+                </div>
+                
+                <!-- Category Tabs for Filter -->
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="all">All Services</button>
+                    <button class="tab-btn" data-category="SEO">SEO Domination</button>
+                    <button class="tab-btn" data-category="Marketing">Performance Ads</button>
+                    <button class="tab-btn" data-category="Design">UX & Branding</button>
+                    <button class="tab-btn" data-category="Development">Custom Dev</button>
+                    <button class="tab-btn" data-category="Automation">AI & Analytics</button>
+                </div>
+                
+                <!-- Services Grid -->
+                <div class="services-grid">
+                    {% for service in services %}
+                    <div class="service-card glass-card" data-cat="{{ service.category }}">
+                        <div class="card-glow"></div>
+                        <div class="card-border-glow"></div>
+                        <div class="service-icon">
+                            <i class="{{ service.icon }}"></i>
+                        </div>
+                        <h3 class="service-title">{{ service.name }}</h3>
+                        <p class="service-description">{{ service.description }}</p>
+                        <a href="#contact" class="service-learn-more">
+                            <span>Request Quote</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Results Section -->
+        <section id="results" class="results-section">
+            <div class="results-bg-blobs">
+                <div class="blob blob-purple"></div>
+                <div class="blob blob-blue"></div>
+            </div>
+            
+            <div class="container results-container">
+                <div class="results-info">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Proven Scaling Data</span>
+                    </div>
+                    <h2 class="section-title">Results That Speak Volume</h2>
+                    <p class="section-subtitle">We don't count vanity metrics. We measure real growth: conversions, inquiries, high ranking placement, and pipeline revenue.</p>
+                    
+                    <!-- Real-time interactive technology stack showcase -->
+                    <div class="tech-stack-wrap">
+                        <h4>Powering Web & CRM Solutions with Core Enterprise Tech</h4>
+                        <div class="tech-icons">
+                            <div class="tech-tag"><i class="ri-python-line"></i> Python & Django</div>
+                            <div class="tech-tag"><i class="ri-database-2-line"></i> MySQL Database</div>
+                            <div class="tech-tag"><i class="ri-javascript-line"></i> JS & GSAP</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Counter Cards Grid -->
+                <div class="counters-grid">
+                    <div class="counter-card glass-card">
+                        <div class="counter-glow"></div>
+                        <div class="counter-number-wrap">
+                            <span class="counter-num" data-target="100">0</span><span class="counter-suffix">+</span>
+                        </div>
+                        <div class="counter-label">Projects Completed</div>
+                    </div>
+                    
+                    <div class="counter-card glass-card">
+                        <div class="counter-glow"></div>
+                        <div class="counter-number-wrap">
+                            <span class="counter-num" data-target="20">0</span><span class="counter-suffix">+</span>
+                        </div>
+                        <div class="counter-label">Happy Corporate Clients</div>
+                    </div>
+                    
+                    <div class="counter-card glass-card">
+                        <div class="counter-glow"></div>
+                        <div class="counter-number-wrap">
+                            <span class="counter-num" data-target="99">0</span><span class="counter-suffix">%</span>
+                        </div>
+                        <div class="counter-label">Average Client Revenue Growth</div>
+                    </div>
+                    
+                    <div class="counter-card glass-card">
+                        <div class="counter-glow"></div>
+                        <div class="counter-number-wrap">
+                            <span class="counter-suffix">$</span><span class="counter-num" data-target="5">0</span><span class="counter-suffix">M+</span>
+                        </div>
+                        <div class="counter-label">Client Revenue Generated</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="work" class="work-section">
+            <div class="container">
+                <div class="work-header text-center">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Our Success Stories</span>
+                    </div>
+                    <h2 class="section-title">Selected Case Studies</h2>
+                    <p class="section-subtitle">Explore high-converting solutions engineered for startups and enterprise leaders.</p>
+                </div>
+                
+                <div class="work-grid">
+                    {% for project in projects %}
+                    <div class="work-card glass-card">
+                        <div class="work-img-wrap">
+                            <div class="work-card-overlay">
+                                <a href="#contact" class="btn btn-primary magnetic" data-strength="15">
+                                    <span>Scale Your Business</span>
+                                </a>
+                            </div>
+                            <!-- Mock Project Visual using abstract CSS gradients -->
+                            <div class="project-visual-mock" style="background: linear-gradient(135deg, {% cycle '#1e293b, #0f172a' '#0f172a, #3b82f6' '#581c87, #0f172a' '#1e1b4b, #6366f1' %});">
+                                <div class="project-mock-nodes">
+                                    <div class="pm-node"></div>
+                                    <div class="pm-node"></div>
+                                </div>
+                                <div class="project-stat-pill">
+                                    <span class="val">{{ project.growth_rate }}</span>
+                                    <span class="lbl">Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-details">
+                            <div class="work-cat">{{ project.category }}</div>
+                            <h3 class="work-title">{{ project.title }}</h3>
+                            <p class="work-desc">{{ project.description }}</p>
+                            <div class="work-metrics">
+                                <span class="metric"><strong>Client:</strong> {{ project.client_name }}</span>
+                                <span class="metric"><strong>Revenue:</strong> {{ project.revenue_generated }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Contact & Map Section -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                
+                <div class="contact-info-panel">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Direct Access</span>
+                    </div>
+                    <h2 class="section-title">Let's Fuel Your Strategy</h2>
+                    <p class="section-subtitle">Reach out directly or book a free 30-minute growth auditing session with our marketing and engineering leads.</p>
+                    
+                    <div class="contact-details-list">
+                        <a href="tel:+15550199" class="contact-detail-item magnetic" data-strength="10">
+                            <div class="icon-box"><i class="ri-phone-line"></i></div>
+                            <div class="details">
+                                <span class="lbl">Phone / Text</span>
+                                <span class="val">+1 (555) 019-9000</span>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:growth@nobleinfotech.co" class="contact-detail-item magnetic" data-strength="10">
+                            <div class="icon-box"><i class="ri-mail-line"></i></div>
+                            <div class="details">
+                                <span class="lbl">Email Address</span>
+                                <span class="val">growth@nobleinfotech.co</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/15550199000" target="_blank" class="contact-detail-item magnetic" data-strength="10">
+                            <div class="icon-box"><i class="ri-whatsapp-line"></i></div>
+                            <div class="details">
+                                <span class="lbl">Direct WhatsApp Chat</span>
+                                <span class="val">Start WhatsApp Conversation</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Dark Google Maps Integration Placeholder -->
+                    <div class="map-wrapper">
+                        <!-- Elegant Dark Custom Embed for Agency Office -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750755!2d-73.98784412342795!3d40.75800103487373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25859c1b3f9ff%3A0x6b447814a0f443b8!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: invert(90%) hue-rotate(180deg) grayscale(80%) contrast(120%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Card -->
+                <div class="contact-form-panel glass-card">
+                    <div class="form-glow"></div>
+                    <h3>Schedule a Consultation</h3>
+                    <p>Tell us about your business goals, target channels, and technology needs.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name *</label>
+                            <span class="input-border"></span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email Address *</label>
+                            <span class="input-border"></span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <span class="input-border"></span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <select id="service_type" name="service_type">
+                                <option value="" disabled selected hidden>Select Service Focus</option>
+                                <option value="SEO Domination">Search Engine Optimization (SEO)</option>
+                                <option value="Performance Ads & Marketing">Performance Paid Ads / Marketing</option>
+                                <option value="Website Development">Website / Web App Development</option>
+                                <option value="Branding & UI/UX">Branding & UI/UX Design</option>
+                                <option value="AI Automation">AI Automation & Integrations</option>
+                            </select>
+                            <span class="input-border"></span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+                            <label for="message">Project Requirements / Brief *</label>
+                            <span class="input-border"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gradient btn-full submit-btn magnetic" data-strength="15">
+                            <span>Submit Request</span>
+                            <i class="ri-send-plane-fill"></i>
+                        </button>
+                        
+                        <!-- Form Response Message -->
+                        <div class="form-response-msg" id="formResponse"></div>
+                    </form>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Large Premium Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Noble Infotech Logo" class="logo-img" width="35" height="35" style="border-radius: 50%; object-fit: cover; margin-right: 0.5rem;">
+                    <div class="logo-text">
+                        <span class="brand-name">NOBLE</span>
+                        <span class="brand-sub">INFOTECH</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Premium award-winning agency helping companies scale brand equity, organic placement, and automated customer acquisition pipelines.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon magnetic" data-strength="8"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="social-icon magnetic" data-strength="8"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="social-icon magnetic" data-strength="8"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-icon magnetic" data-strength="8"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-icon magnetic" data-strength="8"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#journey">Our Journey</a></li>
+                    <li><a href="#services">Services Grid</a></li>
+                    <li><a href="#results">Results Data</a></li>
+                    <li><a href="#work">Case Studies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Services Focus</h4>
+                <ul>
+                    <li><a href="#services">SEO Optimization</a></li>
+                    <li><a href="#services">Paid Google Ads</a></li>
+                    <li><a href="#services">Social Ads scaling</a></li>
+                    <li><a href="#services">Web Custom Coding</a></li>
+                    <li><a href="#services">AI Integrations</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Insights Newsletter</h4>
+                <p>Subscribe to receive high-converting marketing briefs & technology scaling blueprints.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!');">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary"><i class="ri-arrow-right-line"></i></button>
+                </form>
+                <div class="newsletter-policy">
+                    <a href="#">Privacy Policy</a> &bull; <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Noble Infotech. All Rights Reserved. Custom Engineered with Django & MySQL.</p>
+            <p class="designer-tag">Built for Ultimate Brand Scaling</p>
+        </div>
+    </footer>
+
+    <!-- GSAP Core and Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    
+    <!-- Custom Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
